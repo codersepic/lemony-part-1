@@ -1,3 +1,6 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`Lava`, function (sprite, location) {
+    game.gameOver(false)
+})
 scene.setBackgroundImage(assets.image`Backdrop - Forest`)
 tiles.setCurrentTilemap(tilemap`level1`)
 mp.setPlayerSprite(mp.playerSelector(mp.PlayerNumber.One), sprites.create(assets.image`Strawberry`, SpriteKind.Player))
@@ -20,3 +23,4 @@ tiles.placeOnRandomTile(mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One
 tiles.placeOnRandomTile(mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Two)), sprites.builtin.forestTiles0)
 tiles.placeOnRandomTile(mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Three)), sprites.builtin.forestTiles0)
 tiles.placeOnRandomTile(mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Four)), sprites.builtin.forestTiles0)
+mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).ay = 1000
